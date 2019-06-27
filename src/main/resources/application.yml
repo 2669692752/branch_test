@@ -1,0 +1,21 @@
+server:
+  port: 9233
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: test
+  datasource:
+    url: jdbc:mysql://192.168.0.107:3306/test?characterEncoding=utf8&useSSL=false&serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    database: mysql
+
+
+
+
+
+
