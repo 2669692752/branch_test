@@ -38,4 +38,21 @@ public class TestController {
         map.put("data",list);
         return map;
     }
+
+    @RequestMapping(value = "/test3", method = RequestMethod.POST)
+    @ApiOperation(notes = "显示返回code和msg", httpMethod = "POST", value = "测试1", response = APIResponse.class)
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "param1", value = "参数1", required = true, dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "param2", value = "参数2", required = true, dataType = "String", paramType = "query")
+    })
+    public Map<String,Object> test3(String param1, String param2) {
+        Map<String,Object> map=new HashMap<>(10);
+        List<Object> list=new LinkedList<>();
+        list.add(param1);
+        list.add(param2);
+        map.put("code","code");
+        map.put("msg","msg");
+        map.put("data",list);
+        return map;
+    }
 }
