@@ -28,14 +28,14 @@ public class TestController {
             @ApiImplicitParam(name = "param1", value = "参数1", required = true, dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "param2", value = "参数2", required = true, dataType = "String", paramType = "query")
     })
-    public Map<String,Object> test1(String param1, String param2) {
-        Map<String,Object> map=new HashMap<>(10);
-        List<Object> list=new LinkedList<>();
+    public Map<String, Object> test1(String param1, String param2) {
+        Map<String, Object> map = new HashMap<>(10);
+        List<Object> list = new LinkedList<>();
         list.add(param1);
         list.add(param2);
-        map.put("code","code");
-        map.put("msg","msg");
-        map.put("data",list);
+        map.put("code", "code");
+        map.put("msg", "msg");
+        map.put("data", list);
         return map;
     }
 
@@ -45,14 +45,14 @@ public class TestController {
             @ApiImplicitParam(name = "param1", value = "参数1", required = true, dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "param2", value = "参数2", required = true, dataType = "String", paramType = "query")
     })
-    public Map<String,Object> test3(String param1, String param2) {
-        Map<String,Object> map=new HashMap<>(10);
-        List<Object> list=new LinkedList<>();
+    public Map<String, Object> test3(String param1, String param2) {
+        Map<String, Object> map = new HashMap<>(10);
+        List<Object> list = new LinkedList<>();
         list.add(param1);
         list.add(param2);
-        map.put("code","code");
-        map.put("msg","msg");
-        map.put("data",list);
+        map.put("code", "code");
+        map.put("msg", "msg");
+        map.put("data", list);
         return map;
     }
 }

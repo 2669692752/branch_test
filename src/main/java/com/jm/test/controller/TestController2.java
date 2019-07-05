@@ -1,5 +1,7 @@
 package com.jm.test.controller;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.jm.test.utils.APIResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -10,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -27,38 +27,37 @@ public class TestController2 {
     @RequestMapping(value = "/test20", method = RequestMethod.POST)
     @ApiOperation(notes = "显示返回code和msg", httpMethod = "POST", value = "测试1", response = APIResponse.class)
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "param3", value = "参数1",  dataType = "String", paramType = "query"),
+            @ApiImplicitParam(name = "param3", value = "参数1", dataType = "String", paramType = "query"),
             @ApiImplicitParam(name = "param4", value = "参数2", required = true, dataType = "String", paramType = "query")
     })
-    public Map<String,Object> test20(String param3, String param4) {
-        Map<String,Object> map=new HashMap<>(10);
-        List<Object> list=new LinkedList<>();
+    public Map<String, Object> test20(String param3, String param4) {
+        Map<String, Object> map = new HashMap<>(10);
+        List<Object> list = new LinkedList<>();
         list.add(param3);
         list.add(param4);
-        if(param3==null){
-            param3="0";
+        if (param3 == null) {
+            param3 = "0";
         }
-        BigDecimal bigDecimal=new BigDecimal(param3);
-        map.put("bigDecimal",bigDecimal);
+        BigDecimal bigDecimal = new BigDecimal(param3);
+        map.put("bigDecimal", bigDecimal);
         log.info("origin = {}", param3);
-        log.info("-------------开始时间{}-------------结束时间{}",param3,param4);
-        map.put("uuid",1);
-        map.put("code","code");
-        map.put("msg","msg");
-        map.put("data",list);
+        log.info("-------------开始时间{}-------------结束时间{}", param3, param4);
+        map.put("uuid", 1);
+        map.put("code", "code");
+        map.put("msg", "msg");
+        map.put("data", list);
         return map;
     }
 
-    public static String formatPrice(BigDecimal bd,int num){
-        if(bd == null || num < 0){
+    public static String formatPrice(BigDecimal bd, int num) {
+        if (bd == null || num < 0) {
             return null;
         }
         bd = bd.setScale(num, BigDecimal.ROUND_HALF_UP);
         return bd + "";
     }
 
-    public class MyRunnable implements Runnable{
-
+    public class MyRunnable implements Runnable {
 
 
 //定义线程要执行的run方法逻辑
@@ -66,7 +65,6 @@ public class TestController2 {
         @Override
 
         public void run() {
-
 
 
             for (int i = 0; i < 10; i++) {

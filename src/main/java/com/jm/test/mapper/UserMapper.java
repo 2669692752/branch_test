@@ -1,7 +1,6 @@
 package com.jm.test.mapper;
 
 
-
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.jm.test.entiey.User;
 
