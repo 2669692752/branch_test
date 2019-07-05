@@ -59,24 +59,16 @@ public class TestController3 {
 //        IPage<Map<String, Object>> page = userService.pageMaps(new Page<>(1, 2,count), new QueryWrapper<User>()
 //                                 .between("age", 0, 100));
         IPage<User> page = userService.selectMethod();
-//        System.out.println("返回数据："+userPage.getRecords());
-//
-//        System.out.println("总条数："+userPage.getTotal());
-//
-//        System.out.println("当前页码："+userPage.getCurrent());
-//
-//        System.out.println("总页码："+userPage.getPages());
-//
-//        System.out.println("每页显示条数："+userPage.getSize());
-//
-//        System.out.println("是否有上一页："+page.hasPrevious());
-//
-//        System.out.println("是否有下一页："+page.hasNext());
-//
-//        System.out.println("返回的数据："+userPage.getRecords());
+        map.put("startPage", page.getCurrent() == 1);
+        map.put("endPage",page.getCurrent()==page.getPages());
+        map.put("everyPageSize",page.getSize());
+        map.put("currentPage",page.getCurrent());
+        map.put("totalSize",page.getTotal());
+        map.put("allPage",page.getPages());
         map.put("code", "code");
         map.put("msg", "msg");
-        map.put("data", page);
+        map.put("data", page.getRecords());
+        map.put("currentSize",page.getRecords().size());
         return map;
     }
 

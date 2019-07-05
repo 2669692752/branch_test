@@ -35,7 +35,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public IPage<User> selectMethod() {
 //        Integer count = userMapper.selectCount(new QueryWrapper<User>().between("age", 0, 1000));
         // 当前页码，每页条数
-        Page<User> pageParam = new Page<>(3, 3);
+        Page<User> pageParam = new Page<>(1, 3);
         LambdaQueryWrapper<User> query = new LambdaQueryWrapper<>();
         query.between(User::getAge, "0", "100");
         IPage<User> userPage = userMapper.selectPage(pageParam, query);
