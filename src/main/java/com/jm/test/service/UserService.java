@@ -2,7 +2,7 @@ package com.jm.test.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.jm.test.entiey.User;
+import com.jm.test.entity.User;
 
 /**
  * @Author lyx

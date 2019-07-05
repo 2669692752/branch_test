@@ -1,4 +1,4 @@
-package com.jm.test.entiey;
+package com.jm.test.entity;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

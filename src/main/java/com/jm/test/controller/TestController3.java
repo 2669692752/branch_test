@@ -1,7 +1,7 @@
 package com.jm.test.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.jm.test.entiey.User;
+import com.jm.test.entity.User;
 import com.jm.test.service.UserService;
 import com.jm.test.utils.APIResponse;
 import io.swagger.annotations.Api;

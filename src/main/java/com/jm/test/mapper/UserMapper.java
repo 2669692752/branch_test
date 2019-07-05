@@ -2,7 +2,7 @@ package com.jm.test.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.jm.test.entiey.User;
+import com.jm.test.entity.User;
 
 /**
  * @Author lyx

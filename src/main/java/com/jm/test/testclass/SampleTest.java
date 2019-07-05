@@ -1,7 +1,7 @@
 package com.jm.test.testclass;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.jm.test.entiey.User;
+import com.jm.test.entity.User;
 import com.jm.test.mapper.UserMapper;
 import org.junit.Assert;
 import org.junit.Test;
